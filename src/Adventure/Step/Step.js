@@ -6,7 +6,7 @@ export default class Step extends Component {
     return (
       <div className='container-fluid'>
         <h2>{title}</h2>
-        <hr/>
+        <hr style={{ borderColor: 'violet' }} />
         {texts.map(text => {
           if (text.startsWith('/imgs/')) {
             return (
@@ -20,7 +20,7 @@ export default class Step extends Component {
             );
           }
         })}
-        <hr/>
+        <hr style={{ borderColor: 'violet' }} />
         <ul>
           {actions.map(action => {
             return (

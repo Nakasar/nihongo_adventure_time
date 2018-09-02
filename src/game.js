@@ -1,7 +1,7 @@
 export default {
   steps: [
     {
-      title: 'Prologue',
+      title: 'じょしょ',
       texts: [
         "Welcome to this Adventure!",
         "/imgs/0-1.jpg",
