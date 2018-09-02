@@ -7,9 +7,19 @@ export default class Step extends Component {
       <div className='container-fluid'>
         <h2>{title}</h2>
         <hr/>
-        {texts.map(text =>
-          <p key={Math.random()}>{text}</p>
-        )}
+        {texts.map(text => {
+          if (text.startsWith('/imgs/')) {
+            return (
+              <div className='text-center mb-2'>
+                <img key={Math.random()} src={text} alt='Image could not be displayed' style={{ maxWidth: '80%' }} />
+              </div>
+            );
+          } else {
+            return (
+              <p key={Math.random()}>{text}</p>
+            );
+          }
+        })}
         <hr/>
         <ul>
           {actions.map(action => {

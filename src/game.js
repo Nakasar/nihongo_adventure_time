@@ -4,6 +4,7 @@ export default {
       title: 'Prologue',
       texts: [
         "Welcome to this Adventure!",
+        "/imgs/0-1.jpg",
         "This is going to be fun!",
       ],
       actions: [
@@ -56,4 +57,4 @@ export default {
       ]
     }
   ],
-}
+};

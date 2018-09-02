@@ -96,6 +96,9 @@ export default class Adventure extends Component {
             />
           </div>
         </div>
+        <div className='border-top text-right'>
+          <a href='https://mines-nancy.univ-lorraine.fr' className='btn btn-link text-info'>Ecole des Mines de Nancy</a>
+        </div>
       </div>
     )
   }
