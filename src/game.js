@@ -191,9 +191,10 @@ export default {
     {
       title: "ちんもく",
       texts: [
-        "あなたは村に到着。しかし、何かが間違っています。",
-        "音はありません。誰もいない。村は空です。",
-        "嵐が来ている。"
+        "あなたは村に到着。しかし、何かが間違っています。", // Arrived, something is wrong.
+        "音はありません。誰もいない。村は空です。", // no sound, no one, empty.
+        "/sounds/06-1.mp3",
+        "嵐が来ている。" // A storm is coming.
       ],
       actions: [
         {
@@ -215,7 +216,7 @@ export default {
           ]
         },
         {
-          text: '村の中心に行く', // search for the house
+          text: '村の中心に行く', //Go to center of village
           effects: [
             {
               id: 'go_to',
@@ -240,7 +241,7 @@ export default {
     {
       title: '村の中心', // Center of village
       texts: [
-        ""
+        "End of game."
       ],
       actions: [],
     }
