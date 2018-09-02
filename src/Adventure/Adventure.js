@@ -84,7 +84,7 @@ export default class Adventure extends Component {
           quitAdventure={this.quitAdventure}
           saved={this.state.saved} />
         <div className='row mt-2'>
-          <div className='col-4 border-right'>
+          <div className='col-4 border-right' style={{ maxWidth: '350px' }}>
             <Inventory 
               inventory={GameManager.getInventory()}
             />

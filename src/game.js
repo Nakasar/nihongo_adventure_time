@@ -159,12 +159,88 @@ export default {
         "あなたはGPSを使用。あなたはいくつかのバスと電車を利用。",
         "最後に、あなたは村に到着。",
       ],
+      actions: [
+        {
+          text: '指示に従って。',
+          effects: [
+            {
+              id: "go_to",
+              step: 6,
+            }
+          ]
+        }
+      ],
+    },
+    {
+      title: '指示',
+      texts: [
+        "彼は村に行く方法を教えてくれる。"
+      ],
+      actions: [
+        {
+          text: '指示に従って。',
+          effects: [
+            {
+              id: "go_to",
+              step: 6
+            }
+          ]
+        }
+      ],
+    },
+    {
+      title: "ちんもく",
+      texts: [
+        "あなたは村に到着。しかし、何かが間違っています。",
+        "音はありません。誰もいない。村は空です。",
+        "嵐が来ている。"
+      ],
+      actions: [
+        {
+          text: '友達に電話する。', // call friend
+          effects: [
+            {
+              id: 'go_to',
+              step: 7, // no answer
+            }
+          ]
+        },
+        {
+          text: '家を探してみて', // search for the house
+          effects: [
+            {
+              id: 'go_to',
+              step: 8,
+            }
+          ]
+        },
+        {
+          text: '村の中心に行く', // search for the house
+          effects: [
+            {
+              id: 'go_to',
+              step: 9,
+            }
+          ]
+        }
+      ]
+    },
+    {
+      title: 'No answer',
+      texts: [],
+      actions: []
+    },
+    {
+      title: '家を探してみて', // Search the house
+      texts: [
+        "彼は農場と森の近くに住んでいます。"
+      ],
       actions: [],
     },
     {
-      title: 'Ready to go',
+      title: '村の中心', // Center of village
       texts: [
-        "The local guide tells you how to reach the village."
+        ""
       ],
       actions: [],
     }
