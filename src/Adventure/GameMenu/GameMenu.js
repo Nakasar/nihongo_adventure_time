@@ -6,7 +6,7 @@ export default class GameMenu extends Component {
       <div>
         <div className='row border-bottom justify-content-between'>
           <div className='col'>
-            <button className='btn btn-link text-info disabled'>日本語 アドベンチャー</button>
+            <button className='btn btn-link text-info disabled'>日本の冒険</button>
             <a href='https://kevin.thizy.eu' className='btn btn-link'>by Kevin Thizy</a>
           </div> 
           <div className='col text-right'>

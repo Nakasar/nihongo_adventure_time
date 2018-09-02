@@ -10,8 +10,16 @@ export default class Step extends Component {
         {texts.map(text => {
           if (text.startsWith('/imgs/')) {
             return (
-              <div className='text-center mb-2'>
-                <img key={Math.random()} src={text} alt='Image could not be displayed' style={{ maxWidth: '80%' }} />
+              <div key={Math.random()} className='text-center mb-2'>
+                <img src={text} alt='Image could not be displayed' style={{ maxWidth: '80%' }} />
+              </div>
+            );
+          } else if (text.startsWith('/sounds/')) {
+            return (
+              <div key={Math.random()} className='text-center mb-2'>
+                <audio src={text} controls autoPlay>
+                  Your browser does not support the <code>audio</code>.
+                </audio>
               </div>
             );
           } else {

@@ -36,7 +36,7 @@ class GameManager {
 
   newGame = () => {
     this.save = {
-      inventory: [{ name: 'Chocolate Bar' }],
+      inventory: [],
       position: 0,
     };
   }
@@ -111,6 +111,9 @@ class GameManager {
         case 'use_item':
           const itemIndex = this.save.inventory.findIndex(item => item.name === effect.item);
           this.save.inventory.splice(itemIndex, 1);
+          break;
+        case 'take_item':
+          this.save.inventory.push({ name: effect.item });
           break;
         case 'go_to':
           this.save.position = effect.step;
