@@ -198,7 +198,7 @@ export default {
       ],
       actions: [
         {
-          text: '友達に電話する。', // call friend
+          text: 'ともだち が でんわ お します。', // call friend
           effects: [
             {
               id: 'go_to',
@@ -227,23 +227,276 @@ export default {
       ]
     },
     {
-      title: 'No answer',
-      texts: [],
-      actions: []
+      title: '電話が鳴っています...', // Call a friend no one answers
+      texts: [
+        'だれ も でんわ に こたえません'
+      ],
+      actions: [
+        {
+          text: '家を探してみて', // search for the house
+          effects: [
+            {
+              id: 'go_to',
+              step: 8,
+            }
+          ]
+        },
+        {
+          text: '村の中心に行く', //Go to center of village
+          effects: [
+            {
+              id: 'go_to',
+              step: 9,
+            }
+          ]
+        }
+      ]
     },
     {
       title: '家を探してみて', // Search the house
       texts: [
-        "彼は農場と森の近くに住んでいます。"
+        "彼は農場と森の近くに住んでいます。",
+        "近くに湖があります。",
+        "家は2本の木の間にある。",
+        "/imgs/08-1.png",
+      ],
+      actions: [
+        {
+          text: '村の中心に行く', //Go to center of village
+          effects: [
+            {
+              id: 'go_to',
+              step: 9,
+            }
+          ]
+        },
+        {
+          text: 'ともだち が でんわ お します。', // call friend
+          effects: [
+            {
+              id: 'go_to',
+              step: 7, // no answer
+            }
+          ]
+        },
+        {
+          text: '1に行く', //Go to House 1
+          effects: [
+            {
+              id: 'go_to',
+              step: 10,
+            }
+          ]
+        },
+        {
+          text: '2に行く', //Go to House 2
+          effects: [
+            {
+              id: 'go_to',
+              step: 11,
+            }
+          ]
+        },
+        {
+          text: '3に行く', //Go to House 3
+          effects: [
+            {
+              id: 'go_to',
+              step: 12,
+            }
+          ]
+        },
+        {
+          text: '4に行く', //Go to House 4
+          effects: [
+            {
+              id: 'go_to',
+              step: 13,
+            }
+          ]
+        },
+        {
+          text: '5に行く', //Go to House 5
+          effects: [
+            {
+              id: 'go_to',
+              step: 14,
+            }
+          ]
+        }
+      ],
+    },
+    { title: '村の中心', // Center of village
+      texts: [
+        "老人だけがいる。かれ わ あなた お みます。",
+      ],
+      actions: [
+        {
+          text: '彼を無視します。', // ignore old man
+          effects: [
+            {
+              id: 'go_to',
+              step: 15,
+            }
+          ]
+        },
+      ],
+    },
+    { title: '家1', // House 1, abandonned
+      texts: [
+        "古い放棄された家です。",
+        "誰もここに住んでいない。",
+      ],
+      actions: [
+        {
+          text: '地図に戻る。', // Return to map
+          effects: [
+            {
+              id: 'go_to',
+              step: 8,
+            }
+          ]
+        },
+      ],
+    },
+    { title: '家2', // House 2, witch trap.
+      texts: [
+        "家は古いです。でも光があります。",
+        "庭にはたくさんの花があります。",
+      ],
+      actions: [
+        {
+          text: '地図に戻る。', // Return to map
+          effects: [
+            {
+              id: 'go_to',
+              step: 8,
+            }
+          ]
+        },
+        {
+          text: 'ドアに行きます。', // Knock.
+          effects: [
+            {
+              id: 'go_to',
+              step: 16,
+            }
+          ]
+        },
+      ],
+    },
+    { title: '家3', // House 3, strange neighboor
+      texts: [
+        "新しい伝統的な家です。あなたは内部の光を見る。",
+        "庭には木のログと斧があります。木こりです。"
+      ],
+      actions: [
+        {
+          text: '地図に戻る。', // Return to map
+          effects: [
+            {
+              id: 'go_to',
+              step: 8,
+            }
+          ]
+        },
+        {
+          text: 'ドアに行きます。', // Knock.
+          effects: [
+            {
+              id: 'go_to',
+              step: 18,
+            }
+          ]
+        },
+      ],
+    },
+    { title: '家4', // House 4, good one !
+      texts: [
+        "家4"
+      ],
+      actions: [
+        {
+          text: '地図に戻る。', // Return to map
+          effects: [
+            {
+              id: 'go_to',
+              step: 8,
+            }
+          ]
+        },
+      ],
+    },
+    { title: '家5', // House 5, abandonned house.
+      texts: [
+        "古い放棄された家です。",
+        "誰もここに住んでいない。",
+      ],
+      actions: [
+        {
+          text: '地図に戻る。', // Return to map
+          effects: [
+            {
+              id: 'go_to',
+              step: 8,
+            }
+          ]
+        },
+      ],
+    },
+    { title: '.', // 15, Old man ignored.
+      texts: [
+        "."
       ],
       actions: [],
     },
-    {
-      title: '村の中心', // Center of village
+    { title: '神秘的な女性', // 16, The Witch opens the door.
       texts: [
-        "End of game."
+        "女がドアを開けます。",
+        "はｄじめまして。どうぞ よろしく おねがいします。",
+        "あなたは丁寧に答えます。",
+        "彼女は「ここで何が起こっているのか説明できる」と言う。「お茶を飲みに来てください」。",
       ],
-      actions: [],
+      actions: [
+        {
+          text: '拒否するそして去る。', // Return to map
+          effects: [
+            {
+              id: 'go_to',
+              step: 8,
+            }
+          ]
+        },
+        {
+          text: '同意します。', // Trapped!
+          effects: [
+            {
+              id: 'go_to',
+              step: 17,
+            }
+          ]
+        },
+      ],
+    },
+    { title: '神秘的な女性', // 17, The Witch's poison, THE END...
+      texts: [
+        "あなたはお茶を飲んで議論する。彼女はあなたに奇妙なことをたくさん説明します。",
+        "でも,お茶は毒です。あなたは盆栽に変身しています。",
+        "そして、庭にさらされています。",
+        "あなたの冒険の終わり。"
+      ],
+      actions: [
+      ],
+    },
+    { title: '神秘的な女性', // 18, The neightbour opens the door.
+      texts: [
+        "強い男がドアを開けます。",
+        "「今日は!」と言う。「どういうご用件ですか？」",
+        "友人を探しているしています...",
+        "「私はあなたの友人を知って。彼はしばしば森にとどまります。その道に従ってください。」",
+      ],
+      actions: [
+      ],
     }
   ],
 };
